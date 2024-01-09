@@ -1,28 +1,20 @@
-package com.example.demo1;
+package com.example.demo1.JavaClasses;
 
-public class Client {
+public class Fournisseur {
     private String nom;
     private String prenom;
     private String adresse;
     private String email;
     private String tel;
-    private String adresseDeLivraison;
 
-    public String getAdresseDeLivraison() {
-        return adresseDeLivraison;
-    }
 
-    public void setAdresseDeLivraison(String adresseDeLivraison) {
-        this.adresseDeLivraison = adresseDeLivraison;
-    }
-
-    public Client(String nom, String prenom, String adresse, String email, String tel, String adresseDeLivraison) {
+    public Fournisseur(String nom, String prenom, String adresse, String email, String tel) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.email = email;
         this.tel = tel;
-        this.adresseDeLivraison=adresseDeLivraison;
+
     }
 
     public String getNom() {
@@ -67,13 +59,12 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
+        return "Fournisseur{" +
                 "nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", adresse='" + adresse + '\'' +
                 ", email='" + email + '\'' +
                 ", tel='" + tel + '\'' +
-                ", adresseDeLivraison='" + adresseDeLivraison + '\'' +
                 '}';
     }
 }
