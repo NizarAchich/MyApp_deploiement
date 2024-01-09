@@ -11,7 +11,7 @@
 </head>
 <body>
 <h2 class="mt-1 mb-3 text-center">Bienvenue Au Générateur de Recu</h2>
-<form class="container">
+<form class="container" action="ReceiptServlet" method="post">
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header">
@@ -26,7 +26,7 @@
                         <label for="Fr_nom" class="form-label my-0">Nom:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Fr_nom" type="text" class="form-control form-control-sm"
-                                   placeholder="nom du fournisseur" required>
+                                   placeholder="nom du fournisseur" required name="nomFr">
                             <span class="text-danger ms-2">*</span>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                         <label for="Fr_prenom" class="form-label my-0">Prénom:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Fr_prenom" type="text" class="form-control form-control-sm"
-                                   placeholder="prénom du fournisseur" required>
+                                   placeholder="prénom du fournisseur" required name="prenomFr">
                             <span class="text-danger ms-2">*</span>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <label for="Fr_Adress" class="form-label my-0">Adresse:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Fr_Adress" type="text" class="form-control form-control-sm"
-                                   placeholder="Addresse du fournisseur" required>
+                                   placeholder="Addresse du fournisseur" required name="adresseFr">
                             <span class="text-danger ms-2">*</span>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <label for="Fr_tel" class="form-label my-0">Tél:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Fr_tel" type="tel" class="form-control form-control-sm"
-                                   placeholder="Téléphonne du fournisseur" required>
+                                   placeholder="Téléphonne du fournisseur" required name="telFr">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -63,7 +63,7 @@
                         <label for="Fr_mail" class="form-label my-0">Email:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Fr_mail" type="email" class="form-control form-control-sm"
-                                   placeholder="Email du fournisseur" required>
+                                   placeholder="Email du fournisseur" required name="emailFr">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -84,7 +84,7 @@
                         <label for="Cl_nom" class="form-label my-0">Nom:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Cl_nom" type="text" class="form-control form-control-sm"
-                                   placeholder="Nom du client" required>
+                                   placeholder="Nom du client" required name="nomCl">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -94,7 +94,7 @@
                         <label for="Cl_prenom" class="form-label my-0">Prénom:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Cl_prenom" type="text" class="form-control form-control-sm"
-                                   placeholder="Prénom du client" required>
+                                   placeholder="Prénom du client" required name="prenomCl">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -104,7 +104,7 @@
                         <label for="Cl_tel" class="form-label my-0">Numéro de téléphonne:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Cl_tel" type="tel" class="form-control form-control-sm"
-                                   placeholder="Téléphonne du client" required>
+                                   placeholder="Téléphonne du client" required name="telCl">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -114,7 +114,7 @@
                         <label for="Cl_mail" class="form-label my-0">Email:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Cl_mail" type="email" class="form-control form-control-sm"
-                                   placeholder="Email du client" required>
+                                   placeholder="Email du client" required name="emailCl">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -124,7 +124,7 @@
                         <label for="Cl_Fact_Adress" class="form-label my-0">Addresse de facturation:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Cl_Fact_Adress" type="text" class="form-control form-control-sm"
-                                   placeholder="Addresse du client" required>
+                                   placeholder="Addresse du client" required name="adresse_fact_cl">
                             <span class="text-danger ms-2">*</span>
                         </div>
 
@@ -134,7 +134,7 @@
                         <label for="Cl_Adress" class="form-label my-0">Addresse de Livraison:</label>
                         <div class="d-flex flex-row my-0">
                             <input id="Cl_Adress" type="text" class="form-control form-control-sm"
-                                   placeholder="Addresse de la livraison" required>
+                                   placeholder="Addresse de la livraison" required name="adresseCl">
                             <span class="text-danger ms-2">*</span>
                         </div>
                     </div>
@@ -163,10 +163,10 @@
                             </thead>
                             <tbody id="myTableBody">
                             <tr>
-                                <td><input class="form-control me-2" name="codePr"></td>
-                                <td><input class="form-control me-2" name="nomPr"></td>
-                                <td><input class="form-control me-2" name="quantitéPr"></td>
-                                <td><input class="form-control me-2" name="prixPr"></td>
+                                <td><input class="form-control me-2" name="codePr" required></td>
+                                <td><input class="form-control me-2" name="nomPr" required></td>
+                                <td><input class="form-control me-2" name="quantitePr" required></td>
+                                <td><input class="form-control me-2" name="prixPr" required></td>
                             </tr>
                             </tbody>
                             <tfoot>

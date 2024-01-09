@@ -32,5 +32,45 @@ public class Receipt {
                 ", produitList=" + produitList +
                 '}';
     }
+
+    public Amount getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Amount amount) {
+        this.amount = amount;
+    }
+
+    public String getCurrentStringDateAndTime() {
+        return currentStringDateAndTime;
+    }
+
+    public void setCurrentStringDateAndTime(String currentStringDateAndTime) {
+        this.currentStringDateAndTime = currentStringDateAndTime;
+    }
+
+    public Fournisseur getFournisseur() {
+        return fournisseur;
+    }
+
+    public void setFournisseur(Fournisseur fournisseur) {
+        this.fournisseur = fournisseur;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public List<Produit> getProduitList() {
+        return produitList;
+    }
+
+    public void setProduitList(List<Produit> produitList) {
+        this.produitList = produitList;
+    }
 }
 
