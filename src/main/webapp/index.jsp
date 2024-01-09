@@ -161,7 +161,7 @@
                                 <th>Action: </th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="myTableBody">
                             <tr>
                                 <td><input class="form-control me-2" name="codePr"></td>
                                 <td><input class="form-control me-2" name="nomPr"></td>
@@ -178,7 +178,7 @@
                             </tr>
                             </tfoot>
                         </table>
-                        <button type="button" class="btn btn-success my-0">Ajouter Une Commande</button>
+                        <button type="button" class="btn btn-success my-0" onclick="AjouterCommande()">Ajouter Une Commande</button>
                     </div>
                     <br>
                 </div>
@@ -190,4 +190,5 @@
     </div>
 </form>
 </body>
+<script src="script.js"></script>
 </html>
