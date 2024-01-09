@@ -181,12 +181,12 @@
                         <button type="button" class="btn btn-success my-0">Ajouter Une Commande</button>
                     </div>
                     <br>
-                    <div class="row mb-1 mt-0">
-                        <button type="submit" class="btn btn-primary my-0">Générer Recu</button>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row mx-0 mt-5">
+        <button type="submit" class="btn btn-primary">Générer Recu</button>
     </div>
 </form>
 </body>
