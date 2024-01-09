@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo1.JavaClasses;
 
 public enum Taxe {
     TPS(0.05) , TVQ(0.09975);
