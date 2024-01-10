@@ -118,7 +118,7 @@
 </div>
 <div class="row">
     <button type="button" class="btn btn btn-primary text-center" onclick="ImprimerRecu()">Imprimer Recu</button>
-    <button class="btn btn-warning my-1" onclick="window.location.href='index.jsp'">Retour au formulaire</button>
+    <button class="btn btn-danger my-1" onclick="window.location.href='index.jsp'">Retour au formulaire</button>
 </div>
 </body>
     <script src="script.js"></script>
